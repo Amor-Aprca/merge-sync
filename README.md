@@ -1,23 +1,27 @@
-Log started at 2025-01-06 19:17:49
+1.Installation
 
-File: M:/time noly/1\09.mkv
+pip install -r requirements.txt
 
-Video Time: 1396 s
+0.Log started at 2025-01-06 19:17:49
 
-Audio Time: 1400 s
+  File: M:/time noly/1\09.mkv
+ 
+  Video Time: 1396 s
 
-Rule: video_time < audio_time
+  Audio Time: 1400 s
 
-Generated File: M:/time noly/1\09_1.mkv
+  Rule: video_time < audio_time
 
-File: M:/time noly/1\09_1.mkv
+  Generated File: M:/time noly/1\09_1.mkv
 
-Video Time: 1396 s
+  File: M:/time noly/1\09_1.mkv
 
-Audio Time: 1396 s
+  Video Time: 1396 s
 
-Rule: video_time == audio_time
+  Audio Time: 1396 s
 
-Skipped
+  Rule: video_time == audio_time
 
-For audio synchronization of videos or single videos in a folder, the code only affects the audio, not the video. The code is the duration of stretching or compressing the audio.
+  Skipped
+
+  For audio synchronization of videos or single videos in a folder, the code only affects the audio, not the video. The code is the duration of stretching or compressing the audio.
