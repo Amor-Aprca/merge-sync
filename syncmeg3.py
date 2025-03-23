@@ -14,12 +14,23 @@ def write_log(message):
         log.write(message + "\n")
 
 def parse_duration_to_seconds(duration):
-    """将时间字符串 (HH:MM:SS) 转换为秒数 (整数)"""
+    """
+    将时间字符串 (HH:MM:SS.sss) 转换为浮点数秒数。
+    支持毫秒部分，并返回完整的浮点数值。
+    示例：1:10:10.1110000 -> 4210.111
+    """
     try:
-        hours, minutes, seconds = duration.split(":")
-        total_seconds = int(hours) * 3600 + int(minutes) * 60 + int(float(seconds))
-        return total_seconds
+        # 分割时间字符串
+        parts = duration.split(":")
+        if len(parts) != 3:
+            raise ValueError("Invalid duration format")
+        
+        hours, minutes, seconds = parts
+        # 将小时和分钟转换为整数，秒部分可能包含小数
+        total_seconds = int(hours) * 3600 + int(minutes) * 60 + float(seconds)
+        return round(total_seconds, 4)  # 保留四位小数
     except Exception as e:
+        write_log(f"Error parsing duration '{duration}': {e}")
         return None
 
 def get_tag_durations_and_seconds(mkv_file):
