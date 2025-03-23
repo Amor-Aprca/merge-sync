@@ -1,3 +1,8 @@
+2025-03-23
+Support millisecond conversion after seconds.
+
+
+
 1.Installation
 
 pip install -r requirements.txt
@@ -6,9 +11,9 @@ pip install -r requirements.txt
 
   File: M:/time noly/1\09.mkv
  
-  Video Time: 1396 s
+  Video Time: 1470.845 s
 
-  Audio Time: 1400 s
+  Audio Time: 1474.819 s
 
   Rule: video_time < audio_time
 
@@ -16,12 +21,13 @@ pip install -r requirements.txt
 
   File: M:/time noly/1\09_1.mkv
 
-  Video Time: 1396 s
+  Video Time: 1470.845 s
 
-  Audio Time: 1396 s
+  Audio Time: 1470.845 s
 
   Rule: video_time == audio_time
 
   Skipped
 
   For audio synchronization of videos or single videos in a folder, the code only affects the audio, not the video. The code is the duration of stretching or compressing the audio.
+
